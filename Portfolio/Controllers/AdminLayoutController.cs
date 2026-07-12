@@ -8,5 +8,10 @@ namespace Portfolio.Controllers
         {
             return View();
         }
+
+        public PartialViewResult _HeadPartial()
+        {
+            return PartialView();
+        }
     }
 }

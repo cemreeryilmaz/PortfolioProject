@@ -1,0 +1,25 @@
+﻿@model Project
+@{
+    ViewData["Title"] = "Yeni Proje Ekle";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post">
+    <label>Proje Adı</label>
+    <input type="text" asp-for="Name" class="form-control" required />
+    <span class="text-danger" asp-validation-for="Name"></span>
+    <br />
+    <label>Proje Açıklaması</label>
+    <textarea asp-for="Description" class="form-control" rows="5" required></textarea>
+    <span class="text-danger" asp-validation-for="Description"></span>
+    <br />
+    <label>Görsel Url</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" required />
+    <span class="text-danger" asp-validation-for="ImageUrl"></span>
+    <br />
+    <label>Github Linki</label>
+    <input type="text" asp-for="GitHubUrl" class="form-control" required />
+    <span class="text-danger" asp-validation-for="GitHubUrl"></span>
+    <br />
+    <button class="btn btn-outline-dark">Kaydet</button>
+</form>
