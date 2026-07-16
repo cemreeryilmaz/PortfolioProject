@@ -1,0 +1,34 @@
+﻿@model List<About>
+
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter relative bg-surface-container-lowest" id="about">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+
+        @foreach (var item in Model)
+        {
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden glass-card">
+                <img alt="Professional portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Professional portrait of a software engineer in a modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPgvz2Lu-Z19PyDck-qf2NTMlM1T7rUzFi8LjU5n9hcPU8fKKTC4fErMhmfYp-YsvW7ODaNhexgsyUP1gGLDebAWsrl_9tCDcztldkG3ds67oL6kJ99uZVJZ35YDnekOo3KtENLM-            sja6Klxm1Cb80LPeTfo9h6Wps3gZ4XxRlXN3G2FLiEQ4tqROWvjEbEGZyN6Rr5icMupOeFfTK_UEfJ2YJ3kX4KWjbORD-24rqUVBDW8O27imsogNEUwW_-MA4UiwpnrCpn91x" />
+            </div>
+
+        }
+
+        <div class="flex flex-col gap-stack-md">
+            <h2 class="font-headline-md text-headline-md text-on-background">About Me</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">Hello! I'm Alex, a passionate software engineer with over 5 years of experience creating digital products. I specialize in building responsive, accessible, and highly performant web applications.</p>
+            <p class="font-body-md text-body-md text-on-surface-variant">My journey in tech started with a curiosity about how things work on the internet, which quickly evolved into a deep dive into frontend frameworks and backend architectures. I believe in clean code, user-centric design, and continuous learning.</p>
+
+
+                
+
+            <div class="grid grid-cols-2 gap-stack-md mt-stack-sm">
+                <div>
+                    <h4 class="font-label-sm text-label-sm text-primary mb-1">Frontend</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">React, Next.js, Vue, Tailwind CSS</p>
+                </div>
+                <div>
+                    <h4 class="font-label-sm text-label-sm text-primary mb-1">Backend</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Node.js, Express, PostgreSQL, MongoDB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

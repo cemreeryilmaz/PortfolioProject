@@ -1,0 +1,30 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Portfolio.Data.Context;
+using Portfolio.Data.Entities;
+
+namespace Portfolio.Controllers
+{
+    public class DefaultController : Controller
+    {
+        private readonly PortfolioContext _context;
+
+        public DefaultController(PortfolioContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SendMessage(UserMessage userMessage)
+        {
+            _context.UserMessages.Add(userMessage);
+            _context.SaveChanges();
+
+            return NoContent();
+        }
+    }
+}
